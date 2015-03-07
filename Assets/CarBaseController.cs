@@ -44,12 +44,14 @@ public class CarBaseController : MonoBehaviour {
 		float brake=0;
 		float motor=0;
 
-		if (Input.GetAxis ("Vertical") < 0 && voiture.velocity.magnitude > 0.001f) {
+		if (Input.GetAxis ("Vertical") < 0 && GoForward()) {
 			 brake = - maxBrakeTorque * Input.GetAxis ("Vertical");
 		}
 		else {
 			 motor = maxMotorTorque * Input.GetAxis ("Vertical");
-
+			if ( GoRewind() ) {
+				motor = motor/1.5f;
+			}
 		}
 
 		float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
@@ -76,8 +78,12 @@ public class CarBaseController : MonoBehaviour {
 		}
 	}
 
-	public bool Forwarding() {
+	public bool GoForward() {
 		AxleInfo axle = axleInfos [0];
-		return (axle.leftWheel.rpm >= 0);
+		return (axle.leftWheel.rpm > 0);
+	}
+
+	public bool GoRewind() {
+		return !GoForward();
 	}
 }

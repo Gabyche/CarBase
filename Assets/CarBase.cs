@@ -17,6 +17,7 @@ public class CarBase :MonoBehaviour {
 	public float maxMotorTorque;
 	public float maxBrakeTorque;
 	public float maxSteeringAngle;
+	public float stickingForce;
 	
 
 	public List<AxleInfo> axleInfos; 
@@ -93,8 +94,13 @@ public class CarBase :MonoBehaviour {
 
 	public Text speedDisplay;
 
-	public void SpeedCounter() {
+	private void SpeedCounter() {
 		speedDisplay.text = Mathf.Round(Speed ()) + " km/h";
+	}
+
+	private void StickTheRoad() // pris sur internet, la voiture perd vite de l'adhérence avec la vitesse (limite du moteur physique ou du programmeur ?)
+	{
+		axleInfos [0].leftWheel.attachedRigidbody.AddForce(-transform.up*stickingForce*Speed ());
 	}
 
 

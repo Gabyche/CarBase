@@ -5,11 +5,7 @@ using System.Collections.Generic;
 
 [RequireComponent (typeof (CarBase))]
 public class CarBaseController : MonoBehaviour {
-
 	
-	public float maxMotorTorque;
-	public float maxBrakeTorque;
-	public float maxSteeringAngle;
 
 	public CarBase car;
 
@@ -21,31 +17,26 @@ public class CarBaseController : MonoBehaviour {
 	public void FixedUpdate()
 	{
 		
-		car.Move (Motor (), Brake (), Steer ());
+		car.Move (Accel (), Brake (), Steer ());
 	}
 	
 
 
 
 	public float Steer () {
-		return maxSteeringAngle * Horizontal();
+		return Horizontal();
 	}
 
 	public float Brake() {
 		if (Braking()) {
-			return - maxBrakeTorque * Vertical();
+			return - Vertical();
 		}
 		return 0;
 	}
 
-	public float Motor() {
-		float motor;
+	public float Accel() {
 		if (!Braking()) {
-			motor = maxMotorTorque * Vertical();
-			if ( car.GoRewind() ) {
-				motor = motor/1.2f;
-			}
-			return motor;
+			return Vertical();
 		}
 		return 0;
 	}

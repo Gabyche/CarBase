@@ -86,7 +86,7 @@ public class CarBaseController : MonoBehaviour {
 	}
 
 	public bool Braking() {
-		return Vertical() < 0 && GoForward ();
+		return Vertical() < 0 && GoForward();
 	}
 
 	public bool GoForward() {

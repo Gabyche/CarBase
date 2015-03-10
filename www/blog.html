@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>The Mechanicians</title>
+    <link rel="shortcut icon" href="">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">]-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">]
+    <style>body {
+        padding-top: 50px;
+    }
+
+    .starter-template {
+        padding: 40px 15px;
+        text-align: center;
+    }</style>
+
+    <!--[if IE]>
+    <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">The Mechanicians</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Présentation</a></li>
+                <li><a href="wheeels.html">Wheeels - Le jeu</a></li>
+                <li><a href="team.html">L'équipe</a></li>
+                <li><a href="first.html">1ère soutenance</a></li>
+                <li><a href="second.html">2ème soutenance</a></li>
+                <li><a href="third.html">3ème soutenance</a></li>
+                <li class="active"><a href="#">Blog</a></li>
+            </ul>
+        </div>
+        <!--.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="blog-header">
+        <h1 class="blog-title">The Mechanicians official blog</h1>
+
+        <p class="lead blog-description">Voici le blog officiel des Mechanicians. Nous y décrivons nos expériences marquantes - et parfois douloureuses - dans la gestion de notre projet</p>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+            <div id="blog-post-1" class="blog-post">
+                <h2 class="blog-post-title">Découverte de GitHub</h2>
+
+                <p class="blog-post-meta">15 février 2015 par <a href="#">Gabriel</a></p>
+
+                <p>Il parait qu'il vaut mieux utiliser un gestionnaire de version pour le projet.</p>
+
+                <p>C'est confirmé. Hier j'ai du repartir à zéro sur un fichier pour un malencontreux ctrl + S.</p>
+
+                <p>Cela ne m'arrivera (peut-être) plus.</p>
+
+                <h3>Création d'un compte</h3>
+
+                <p>GitHub est gratuit pour tous les "repos" publics. Il faut créer un compte, télécharger l'application GitHub pour Windows. Il faut 10 minutes pour la prendre en main.</p>
+
+                <p>J'ai essayé au préalable d'installer des outils git sous windows, c'est un enfer. L'appli GitHub fait le boulot même si elle cache le process.</p>
+
+                <h3>Utilisation</h3>
+
+                <p>La première étape consiste à créer un repo sur le site github.com. A part choisir un nom, il y a deux options : </p>
+                <ul>
+                    <li>choisir un .gitignore en fonction de son projet</li>
+                    <li>choisir une licence</li>
+                </ul>
+
+                <p>Il ne faut pas négliger la première. Par exemple notre jeu est programmé sous Unity 3D. Il y a un .gitignore tout fait pour.
+                    Ce fichier va permettre à git de ne pas suivre les fichiers de travail d'unity. Gros gain de temps car pas de pollution avec notre flux de travail.</p>
+
+            </div>
+            <!-- /.blog-post -->
+            <hr/>
+
+            <div id="blog-post-2" class="blog-post">
+                <h2 class="blog-post-title">Unity 3D ou pourquoi on nous enseigne les maths et la physique à l'EPITA</h2>
+
+                <p class="blog-post-meta">18 février 2015 par <a href="#">Gabriel</a></p>
+
+                <p>3 jours que je fais des tutos pour comprendre Unity et je ne suis pas certain de progresser.</p>
+
+                <p>C'est un mélange de géométrie dans l'espace (tout a une position, chaque objet a un Transform qui gère une position, une rotation et un facteur d'échelle dans les trois dimensions).
+                La dimension Z me perturbe. Elle gère la profondeur dans l'espace. X et Y gèrent un plan vertical alors qu'intuitivement j'ai tendance à considérer X et Y horizontalement.</p>
+
+                <p>
+                    Il y a aussi la physique de l'environnement de jeu qui est géré par un moteur créé et maintenu par Nvidia à travers de s objets qui sont appelés des Colliders
+                </p>
+                <blockquote>
+                    <p>From Wikipedia, the free encyclopedia</p>
+                    <p>A <b>collider</b> is a type of particle accelerator involving directed beams of particles.
+                        Colliders may either be ring accelerators or linear accelerators, and may collide a single beam of particles against a stationary target or two beams head-on.</p>
+                    <p>Colliders are used as a research tool in particle physics by accelerating particles to very high kinetic energy and letting
+                        them impact other particles. Analysis of the byproducts of these collisions gives scientists good evidence of the structure of
+                        the subatomic world and the laws of nature governing it. These may become apparent only at high energies and for tiny periods of
+                        time, and therefore may be hard or impossible to study in other ways.</p>
+                </blockquote>
+                <p>Je vous recommande de consulter le site de PhysX pour essayer de comprendre certains concepts.</p>
+
+
+
+            </div>
+            <!-- /.blog-post -->
+
+
+        </div>
+        <!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+
+
+            <div class="sidebar-module">
+                <h4>Ailleurs</h4>
+                <ol class="list-unstyled">
+                    <li><a href="https://github.com">GitHub</a></li>
+                    <li><a href="http://getbootstrap.com">Bootstrap</a></li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.blog-sidebar -->
+
+    </div>
+    <!-- /.row -->
+
+
+
+    <hr>
+
+    <footer>
+        <p>&copy; The Mechanicians 2015</p>
+    </footer>
+</div> <!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
